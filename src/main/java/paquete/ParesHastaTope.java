@@ -1,3 +1,5 @@
+/* Mostrar los números pares que hay desde el número 1 hasta N (N es un tope definido por el usuario). Recuerden que existe el operador "%" que lo que hace es decirnos el resto de la división entre dos números. Ejemplos:  7 % 3 = 1  ;  10 % 5 = 0  ;  etc. */
+
 package paquete;
 
 import java.util.Scanner;
