@@ -11,7 +11,7 @@ public class Ciclos {
 		
 		// i = i + 1 == i++
 		
-		/*(Pseint: Para)
+		//(Pseint: Para)
 			
 			for(int i = 1; i<=10; i++){
 			
@@ -23,7 +23,7 @@ public class Ciclos {
 		}
 		
 		System.out.println("Chau");
-		*/
+		
 		
 		/*(Pseint: Mientras)
  		
