@@ -4,7 +4,7 @@
  * Para resolver este ejercicio utilizar un ciclo for (Para).
  */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

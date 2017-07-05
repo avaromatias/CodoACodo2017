@@ -2,7 +2,7 @@
  * Dados dos valores numéricos enteros, calcular e informar su producto mediante sumas sucesivas.
  */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

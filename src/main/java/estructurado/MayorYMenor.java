@@ -2,7 +2,7 @@
  * Dados n valores numéricos, informar el mayor y el menor.
  */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

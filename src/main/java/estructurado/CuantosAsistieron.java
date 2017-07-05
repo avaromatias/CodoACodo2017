@@ -1,6 +1,6 @@
 /* Un profesor, llamémoslo "Mati", se cansó de tomar lista en su curso para saber cuántos alumnos estuvieron presentes en la clase. Queremos ayudarlo de la siguiente forma: se pide ingresar el nombre de los alumnos que asistieron ese día. El programa dejará de pedir nombres cuando se escriba la palabra "fin". Informar por pantalla cuántos alumnos asistieron ese día. */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

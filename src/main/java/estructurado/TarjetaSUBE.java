@@ -1,4 +1,4 @@
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

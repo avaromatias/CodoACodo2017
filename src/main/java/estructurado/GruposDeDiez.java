@@ -1,7 +1,7 @@
 /* Mostrar por pantalla los números entre 1 y 100 en grupos de 10, solicitando al usuario si quiere o no continuar
  * visualizando el siguiente grupo de números. */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

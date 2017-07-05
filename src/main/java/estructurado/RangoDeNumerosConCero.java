@@ -3,7 +3,7 @@
  * pantalla la suma de todos esos números cuando se ingrese el número 0.
  */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 

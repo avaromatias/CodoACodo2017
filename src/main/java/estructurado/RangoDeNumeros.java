@@ -3,7 +3,7 @@
  * pantalla todos los números que hay en ese rango de números.
  */
 
-package paquete;
+package estructurado;
 
 import java.util.Scanner;
 
