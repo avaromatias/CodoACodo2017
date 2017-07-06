@@ -63,8 +63,21 @@ public class Libreria {
 			
 			Libreria.limpiar(20);
 			
+			System.out.println("--------------------PRODUCTOS--------------------");
+			System.out.println("1.  Tijera ($25)");
+			System.out.println("2.  Marcador ($20)");
+			System.out.println("3.  Lapicera ($15)");
+			System.out.println("4.  Pluma ($50)");
+			System.out.println("5.  Carpeta ($35)");
+			System.out.println("6.  Cuaderno ($30)");
+			System.out.println("7.  Lapiz ($10)");
+			System.out.println("8.  Liquid paper ($35)");
+			System.out.println("9.  Goma ($10)");
+			System.out.println("10. Regla ($35)");
+			System.out.println("-------------------------------------------------");
+			System.out.println();
 			System.out.println("Dinero disponible: " + dinero);
-			
+			System.out.println();
 			System.out.print("¿Qué producto desea comprar? ");
 			producto = entrada.nextInt();
 			
@@ -77,6 +90,7 @@ public class Libreria {
 			if(dinero - Libreria.precios(producto) >= 0){
 				Libreria.cobrar(Libreria.precios(producto));
 			}else{
+				System.out.println();
 				System.out.print("No tiene dinero suficiente.");
 				Thread.sleep(3000);
 				producto = 0;
