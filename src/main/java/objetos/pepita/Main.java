@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Ave pepita = new Ave();
+		Ave juancito = new Ave();
 		Comida arroz = new Comida();
 		Comida alpiste = new Comida();
 		
@@ -12,6 +13,7 @@ public class Main {
 		arroz.setEnergia(13);
 		
 		pepita.darComida(alpiste);
+		juancito.darComida(arroz);
 		
 		System.out.println("La energia de pepita al momento de crearla es de: " + pepita.getEnergia());
 		
