@@ -4,6 +4,10 @@ public class Persona {
 
 	Tarjeta tarjetaAsociada;
 
+	public Persona(Tarjeta unaTarjeta){
+		tarjetaAsociada = unaTarjeta;
+	}
+	
 	public Tarjeta getTarjetaAsociada() {
 		return tarjetaAsociada;
 	}

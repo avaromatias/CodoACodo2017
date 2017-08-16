@@ -19,17 +19,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		Persona pedro = new Persona();
 		Tarjeta subeDePedro = new Tarjeta();
-		Transporte tren = new Transporte();
-		Transporte colectivo = new Transporte();
-		Transporte subte = new Transporte();
+		Persona pedro = new Persona(subeDePedro);
+		Transporte tren = new Transporte(4);
+		Transporte colectivo = new Transporte(6.25);
+		Transporte subte = new Transporte(7.5);
 		
-		tren.setValorBoleto(4);
-		colectivo.setValorBoleto(6.25);
-		subte.setValorBoleto(7.5);
-		
-		pedro.asignarTarjeta(subeDePedro);
 		pedro.cargarTarjeta(100);
 		
 		System.out.println("El saldo de la tarjeta de Pedro es de: " + subeDePedro.getSaldo());
