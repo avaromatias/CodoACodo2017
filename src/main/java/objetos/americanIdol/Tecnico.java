@@ -3,27 +3,27 @@ package objetos.americanIdol;
 public class Tecnico implements Juez{
 
 	@Override
-	public int votar(Artista unArtista) {
+	public int puntaje(Artista unArtista) {
 		switch(unArtista.getCancion().getGenero()){
-		case "folklore":
+		case "Folklore":
 			if(unArtista.tiene("poncho") && unArtista.tiene("alpargatas")){
 				return 10;
 			}else{
 				return -5;
 			}
-		case "tango":
+		case "Tango":
 			if(unArtista.tiene("sombrero") && unArtista.getEdad() > 50 && unArtista.isAfino()){
 				return 10;
 			}else{
 				return -5;
 			}
-		case "cumbia":
+		case "Cumbia":
 			if(unArtista.isBailaBien()){
 				return 10;
 			}else{
 				return -5;
 			}
-		case "pop":
+		case "Pop":
 			return 10;
 		default:
 			return 0;
