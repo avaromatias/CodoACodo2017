@@ -15,7 +15,7 @@ public class Espectador implements Juez{
 	@Override
 	public int puntaje(Artista unArtista) {
 		
-		if(seIdentificaCon != null){
+		if(this.getSeIdentificaCon() != null){
 			if(this.getSeIdentificaCon().puntaje(unArtista) == 10){
 				return 2;
 			}else{

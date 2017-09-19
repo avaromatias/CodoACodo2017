@@ -14,17 +14,17 @@ public class Main {
 		
 		List<String> indumentariaDelFanDeWanda = Arrays.asList("Campera de cuero", "Lentes de sol");
 		List<String> indumentariaDeKarina = Arrays.asList("Remera nike", "Zapatillas piola");
-		List<String> indumentariaDelPepo = Arrays.asList("Saco", "zapatos", "sombrero");
+		List<String> indumentariaDelPepo = Arrays.asList("Saco", "Zapatos", "Sombrero");
 		
 		Artista fanDeWanda = new Artista("Fan de Wanda", 28, "Hombre", indumentariaDelFanDeWanda, false, false, thriller);
 		Artista karina = new Artista("Karina", 29, "Mujer", indumentariaDeKarina, true, false, losDueniosDelPabellon);
 		Artista elPepo = new Artista("El pepo", 32, "Hombre", indumentariaDelPepo, false, false, porUnaCabeza);
 		
-		Tradicionalista patriciaSosa = new Tradicionalista();
-		Baboso marceloPolino = new Baboso();
-		Tecnico valeriaLynch = new Tecnico();
-		Espectador roque = new Espectador();
-		Espectador mara = new Espectador(valeriaLynch);
+		Tradicionalista patriciaSosa = new Tradicionalista();	//-5
+		Baboso marceloPolino = new Baboso();					//-5
+		Tecnico valeriaLynch = new Tecnico();					//10
+		Espectador roque = new Espectador();					//2
+		Espectador mara = new Espectador(valeriaLynch);			//2
 		
 		Presentador tinelli = new Presentador();
 		tinelli.agregarArtista(elPepo);
@@ -38,7 +38,8 @@ public class Main {
 		
 		System.out.println(tinelli.nombresArtistas(tinelli.puestos()));
 		System.out.println(tinelli.puntajesArtistas(tinelli.puestos()));
-		System.out.println(valeriaLynch.puntaje(karina));
+		System.out.println(tinelli.todosVotanA(fanDeWanda));
+		//System.out.println(mara.puntaje(fanDeWanda));
 		
 	}
 

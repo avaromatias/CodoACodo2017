@@ -6,13 +6,13 @@ public class Tecnico implements Juez{
 	public int puntaje(Artista unArtista) {
 		switch(unArtista.getCancion().getGenero()){
 		case "Folklore":
-			if(unArtista.tiene("poncho") && unArtista.tiene("alpargatas")){
+			if(unArtista.tiene("Poncho") && unArtista.tiene("Alpargatas")){
 				return 10;
 			}else{
 				return -5;
 			}
 		case "Tango":
-			if(unArtista.tiene("sombrero") && unArtista.getEdad() > 50 && unArtista.isAfino()){
+			if(unArtista.tiene("Sombrero") && unArtista.getEdad() > 50 && unArtista.isAfino()){
 				return 10;
 			}else{
 				return -5;

@@ -26,6 +26,6 @@ public class Cancion {
 	}
 	
 	public boolean esPropiaDelPais(){
-		return (genero == "folklore" || genero == "tango");
+		return (genero == "Folklore" || genero == "Tango");
 	}
 }

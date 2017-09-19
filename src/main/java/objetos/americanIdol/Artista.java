@@ -22,7 +22,7 @@ public class Artista {
 	}
 
 	public boolean esMujer() {
-		return sexo == "mujer";
+		return sexo == "Mujer";
 	}
 
 	public boolean esJoven() {
