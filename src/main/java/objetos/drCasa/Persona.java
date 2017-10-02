@@ -2,6 +2,7 @@ package objetos.drCasa;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Persona {
 
@@ -63,6 +64,18 @@ public class Persona {
 	
 	public boolean estaEnComa(){
 		return temperatura >= 45;
+	}
+	
+	public boolean tiene(Enfermedad unaEnfermedad){
+		return enfermedades.contains(unaEnfermedad);
+	}
+	
+	public void curar(Set<Enfermedad> unasEnfermedades){
+		enfermedades.removeAll(unasEnfermedades);
+	}
+	
+	public Set<Enfermedad> enfermedadesSinCelulasAmenazadas(){
+		return enfermedades.stream().filter(enfermedad -> enfermedad.estoyMuerta()).collect(Collectors.toSet());
 	}
 	
 }

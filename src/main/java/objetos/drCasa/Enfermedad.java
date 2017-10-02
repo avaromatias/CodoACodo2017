@@ -28,4 +28,8 @@ public class Enfermedad {
 		
 	}
 	
+	public boolean estoyMuerta(){
+		return celulasAmenazadas == 0;
+	}
+	
 }
