@@ -2,9 +2,12 @@ package objetos.losPiratas;
 
 public class Saqueo implements Mision{
 
+	int cantidadMonedas = 20;
+	Victima victima;
+	
 	@Override
 	public boolean esUtil(Pirata unPirata) {
-		return false;
+		return unPirata.tieneMenosMonedasQue(cantidadMonedas) && unPirata.seAnimaASaquear(victima);
 	}
 
 	@Override

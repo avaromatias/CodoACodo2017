@@ -1,9 +1,12 @@
 package objetos.losPiratas;
 
 import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
-public class Barco {
+public class Barco implements Victima{
 
 	Set<Pirata> tripulacion = new HashSet<Pirata>();
 	Mision mision;
@@ -34,6 +37,16 @@ public class Barco {
 
 	public void cambiarMision(Mision mision) {
 		this.mision = mision;
+		this.echarInutiles();
+	}
+	
+	public void echarInutiles(){
+		//this.setTripulacion(this.tripulantesUtiles());
+		tripulacion.retainAll(this.tripulantesUtiles());
+	}
+	
+	public Set<Pirata> tripulantesUtiles(){
+		return tripulacion.stream().filter(tripulante -> mision.esUtil(tripulante)).collect(Collectors.toSet());
 	}
 
 	public int getCapacidad() {
@@ -42,10 +55,6 @@ public class Barco {
 
 	public void setCapacidad(int capacidad) {
 		this.capacidad = capacidad;
-	}
-
-	private boolean puedeFormarParte(Pirata unPirata) {
-		return false;
 	}
 	
 	public boolean esTemible(){
@@ -66,6 +75,32 @@ public class Barco {
 	
 	public boolean alguienTiene(String unItem){
 		return tripulacion.stream().anyMatch(tripulante -> tripulante.tiene(unItem));
+	}
+
+	@Override
+	public boolean esVulnerable(Barco unBarco) {
+		return this.cantidadTripulacion() < unBarco.cantidadTripulacion() / 2;
+	}
+
+	@Override
+	public boolean seAnimaASaquearme(Pirata unPirata) {
+		return unPirata.estaPasadoDeRon();
+	}
+	
+	public boolean tieneLugarParaUnoMas(){
+		return this.cantidadTripulacion() < capacidad;
+	}
+	
+	public boolean puedeFormarParte(Pirata unPirata){
+		return this.tieneLugarParaUnoMas() && mision.esUtil(unPirata);
+	}
+	
+	public List<Pirata> ordenSegunEbriedad(){
+		return tripulacion.stream().sorted((pirata1, pirata2) -> Integer.compare(pirata1.getNivelEbriedad(), pirata2.getNivelEbriedad())).collect(Collectors.toList());
+	}
+	
+	public Pirata pirataMasEbrio(){
+		return this.ordenSegunEbriedad().get(this.ordenSegunEbriedad().size() - 1);
 	}
 	
 }

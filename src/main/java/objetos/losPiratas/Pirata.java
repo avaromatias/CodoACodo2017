@@ -57,5 +57,17 @@ public class Pirata {
 	public boolean tieneMasItemsQue(int cantidad){
 		return this.cuantosItemsTiene() >= cantidad;
 	}
+
+	public boolean estaPasadoDeRon() {
+		return this.nivelEbriedadMayorA(70);
+	}
+	
+	public boolean nivelEbriedadMayorA(int unNivel){
+		return nivelEbriedad >= unNivel;
+	}
+	
+	public boolean seAnimaASaquear(Victima unaVictima){
+		return unaVictima.seAnimaASaquearme(this);
+	}
 	
 }
