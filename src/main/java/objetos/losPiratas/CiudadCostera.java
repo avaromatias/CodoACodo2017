@@ -8,6 +8,10 @@ public class CiudadCostera implements Victima{
 		habitantes = cantidadHabitantes;
 	}
 	
+	public void agregarHabitantes(int cantidadHabitantes){
+		habitantes += cantidadHabitantes;
+	}
+	
 	@Override
 	public boolean esVulnerable(Barco unBarco) {
 		return unBarco.cantidadTripulacion() >= habitantes * 0.4 || unBarco.getTripulacion().stream().allMatch(tripulante -> tripulante.estaPasadoDeRon());

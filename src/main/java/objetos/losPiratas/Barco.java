@@ -103,4 +103,14 @@ public class Barco implements Victima{
 		return this.ordenSegunEbriedad().get(this.ordenSegunEbriedad().size() - 1);
 	}
 	
+	public void todosTomanRon(){
+		tripulacion.forEach(pirata -> pirata.tomarRon());
+	}
+	
+	public void anclarEn(CiudadCostera unaCiudad){
+		this.todosTomanRon();
+		unaCiudad.agregarHabitantes(1);
+		tripulacion.remove(this.pirataMasEbrio());
+	}
+	
 }

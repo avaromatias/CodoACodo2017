@@ -8,6 +8,10 @@ public class Pirata {
 	List<String> items = new LinkedList<String>();
 	int nivelEbriedad, monedas;
 	
+	public Pirata(int unasMonedas){
+		monedas = unasMonedas;
+	}
+	
 	public Pirata(List<String> unosItems, int unNivel, int unasMonedas){
 		items = unosItems;
 		nivelEbriedad = unNivel;
@@ -68,6 +72,31 @@ public class Pirata {
 	
 	public boolean seAnimaASaquear(Victima unaVictima){
 		return unaVictima.seAnimaASaquearme(this);
+	}
+	
+	public void aumentarNivelDeEbriedad(int unNivel){
+		nivelEbriedad += unNivel;
+	}
+	
+	public void validarMonedas(int unasMonedas) throws Exception{
+		if(monedas - unasMonedas < 0){
+			throw new Exception("No tiene dinero suficiente.");
+		}
+	}
+	
+	public void gastarMonedas(int unasMonedas){
+		try{
+			this.validarMonedas(unasMonedas);
+			monedas -= unasMonedas;
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void tomarRon(){
+		this.aumentarNivelDeEbriedad(5);
+		this.gastarMonedas(1);
 	}
 	
 }
