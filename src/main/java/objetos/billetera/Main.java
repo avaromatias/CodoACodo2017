@@ -8,7 +8,7 @@ public class Main {
 
 		System.out.println(billetera.getSaldo());
 		
-		billetera.poner(1);
+		billetera.sacar(16);
 		
 		System.out.println(billetera.getSaldo());
 		
